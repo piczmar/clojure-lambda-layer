@@ -1,0 +1,3 @@
+[submodule "clojure-layer/layer"]
+	path = clojure-layer/layer
+	url = git@github.com:dainiusjocas/babashka-lambda-layer.git

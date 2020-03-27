@@ -1,0 +1,18 @@
+service: clojure-layer
+provider:
+  name: aws
+  region: us-east-1
+  profile: sls
+
+layers:
+  clojure:
+    package:
+      artifact: layer/babashka-runtime.zip
+
+resources:
+  Outputs:
+    ClojureLayerExport:
+      Value:
+        Ref: ClojureLambdaLayer
+      Export:
+        Name: ClojureLambdaLayer

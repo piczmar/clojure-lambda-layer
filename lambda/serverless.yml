@@ -1,0 +1,12 @@
+service: clojure-lambda-with-layer
+provider:
+  name: aws
+  region: us-east-1
+  profile: sls
+
+functions:
+  example:
+    handler: handler/handle
+    runtime: provided
+    layers:
+      - ${cf:clojure-layer-dev.ClojureLayerExport}
